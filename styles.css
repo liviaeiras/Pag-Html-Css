@@ -1,0 +1,193 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+    color: #4464c4;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4f9cd7;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header .perfil-img {
+    width: 150px;
+    border-radius: 50%;
+    animation: girarFoto 5s infinite alternate; /* Animação da imagem */
+}
+
+h1 {
+    margin-top: 10px;
+    animation: aparecer 2s ease-in-out; /* Animação de aparecer */
+}
+
+/* Biografia */
+#biografia {
+    margin: 20px 0;
+    animation: desvanecer 1.5s ease-in-out; /* Animação de desvanecer */
+}
+
+/* Discografia */
+#discografia {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.album {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease;
+    animation: aparecerSuave 1.5s ease; /* Animação de aparecer */
+}
+
+.album:hover {
+    transform: scale(1.1);
+}
+
+.album img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.album:hover img {
+    transform: rotate(5deg); /* Gira levemente o álbum ao passar o mouse */
+}
+
+/* Datas de turnê */
+#turne ul {
+    list-style: none;
+    padding: 0;
+}
+
+#turne li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#turne li:hover {
+    background-color: #ddd;
+    transform: scale(1.05); /* Expande ligeiramente ao passar o mouse */
+    transition: transform 0.3s ease;
+}
+
+/* Formulário de contato */
+#contato form {
+    display: flex;
+    flex-direction: column;
+    animation: desvanecer 2s ease-in-out; /* Animação de desvanecer */
+}
+
+#contato label, #contato input, #contato textarea, #contato button {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#contato input, #contato textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contato button {
+    background-color: #4d8fe6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: piscarBotao 1.5s infinite; /* Animação de piscar no botão */
+}
+
+#contato button:hover {
+    background-color: #444;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #4d8fe6;
+    color: white;
+    animation: aparecer 1.5s ease; /* Animação de aparecer */
+}
+
+footer .redes-sociais a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .redes-sociais a:hover {
+    color: #00aced;
+    text-decoration: underline;
+}
+
+/* Animações */
+@keyframes girarFoto {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecerSuave {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes desvanecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes piscarBotao {
+    0%, 100% {
+        background-color: #4d8fed;
+    }
+    50% {
+        background-color: #4d8fe6;
+    }
+}
